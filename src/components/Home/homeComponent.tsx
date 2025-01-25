@@ -1,21 +1,23 @@
 "use client";  // Tandai ini sebagai client component
 
-import React, { useEffect, useState } from "react";
-import { CertificationsContent } from "@/pages/certificates/certificateContent";
-import { SourceCode } from "@/pages/sourceCode/sourceCode";
-import { ProjectsContent } from "@/pages/projects/projectsContent";
+import React, { Suspense, useEffect, useState } from "react";
+import  CertificationsContent  from "@/pages/certificates/certificateContent";
+import SourceCode  from "@/pages/sourceCode/sourceCode";
+import ProjectsContent from "@/pages/projects/projectsContent";
 import { HeaderComponent } from "@/components/headers/headerComponent";
 import { SidebarComponent } from "@/components/sidebars/sideBarComponent";
-import { ArticleContents } from "@/pages/articles/articleContents";
+import ArticleContents from "@/pages/articles/articleContents";
 import { useRouter, useSearchParams } from "next/navigation";
 
+export interface IHomeContent {
+  activeMenu: string;
+  setActiveMenu:(menu: string) => void
+}
 
-export default function HomeComponent() {
-  const router = useRouter();
+function HomeContent({ activeMenu, setActiveMenu }: IHomeContent) {  
+
   const searchParams = useSearchParams();
-  const [activeMenu, setActiveMenu] = useState<string>("articles");
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false); 
-
+  
 
   useEffect(() => {
     if (searchParams) {
@@ -41,6 +43,14 @@ export default function HomeComponent() {
     }
   };
 
+  return <>{renderContent()}</>;
+}
+
+export default function HomeComponent() {
+  const router = useRouter();
+  const [activeMenu, setActiveMenu] = useState<string>("articles");
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false); 
+
   const handleMenuChange = (menu: string) => {
     setActiveMenu(menu);
     router.push(`/?activeMenu=${menu}`);
@@ -58,7 +68,17 @@ export default function HomeComponent() {
         activeMenu={activeMenu as string} 
         isSidebarOpen={isSidebarOpen}
         />
-      <main className="flex-1 bg-slate-900 p-6 overflow-y-auto">{renderContent()}</main>
+      {/* <main className="flex-1 bg-slate-900 p-6 overflow-y-auto">{renderContent()}
+
+      </main> */}
+      <main className="flex-1 bg-slate-900 p-6 overflow-y-auto">
+          {/* Bungkus HomeContent dengan Suspense */}
+          <Suspense fallback={<div className="text-white">Loading...</div>}>
+            <HomeContent 
+            activeMenu={activeMenu}
+            setActiveMenu={setActiveMenu}/>
+          </Suspense>
+        </main>
       </div>
     </div>
   );

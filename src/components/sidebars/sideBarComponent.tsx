@@ -1,6 +1,6 @@
 
 import { MenuItems } from "@/mocks/sidebarData";
-import Image, { StaticImageData } from "next/image"
+import Image from "next/image"
 type SidebarProps = {
     setActiveMenu: (menu: string) => void;
     activeMenu: string;

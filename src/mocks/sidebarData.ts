@@ -1,10 +1,9 @@
 import  { StaticImageData } from "next/image"
 import logoProjects from "../assets/images/projects.png"
-import logoCourses from "../../assets/images/free_courses.png"
 import logoBooks from "../assets/images/book.png"
 import logoCertified from "../assets/images/certified.png"
 import sourceCode from "../assets/images/sourceCode.svg"
-import logoFlame from "../assets/images/flame.gif"
+
 interface MenuItem {
     id: string;
     label: string;

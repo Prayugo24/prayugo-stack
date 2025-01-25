@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Image from "next/image"
-import serachIcon from "../../assets/images/search_icon.svg"
 import { sourceCoudeContent } from "@/mocks/sourceCodeContent";
 import { PaginationComponent } from "@/components/pagination/paginationComponent";
 import { ListComponent } from "@/components/List/listComponent";
 import { SearchComponent } from "@/components/search/searchComponent";
 
-export const SourceCode: React.FC = () => {
+const SourceCode: React.FC = () => {
     const [isVisible, setVisible] = useState(false);
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [searchTerm, setSearchTerm] = useState<string>(""); 
@@ -51,3 +49,5 @@ export const SourceCode: React.FC = () => {
     </div>
     )
 }
+
+export default SourceCode;

@@ -3,10 +3,9 @@ import { CardComponent } from "@/components/card/cardComponent";
 import { PaginationComponent } from "@/components/pagination/paginationComponent";
 import { TagsComponent } from "@/components/tags/tagsComponent";
 import { projectsSample,tagProjectsSample } from "@/mocks/projectsContent";
-import Image from "next/image"
 import React, { useEffect, useState } from "react";
 
-export const ProjectsContent: React.FC = () => {
+const ProjectsContent: React.FC = () => {
     const [isVisible, setVisible] = useState(false);
     const [activeFilter, setAcveFilter] = useState<string>("ALL");
     const [currentPage, setCurrentPage] = useState<number>(1);
@@ -58,3 +57,5 @@ export const ProjectsContent: React.FC = () => {
     ) 
 
 }
+
+export default ProjectsContent;

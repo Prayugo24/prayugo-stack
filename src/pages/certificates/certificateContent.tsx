@@ -5,9 +5,9 @@ import { SearchComponent } from "@/components/search/searchComponent";
 import { CardComponent } from "@/components/card/cardComponent";
 import { certificateSample } from "@/mocks/certificateContent";
 
-export const CertificationsContent: React.FC = () => {
+const CertificationsContent: React.FC = () => {
   const [isVisible, setVisible] = useState(false);
-  const [activeFilter, setAcveFilter] = useState<string>("ALL");
+  const [activeFilter] = useState<string>("ALL");
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [searchTerm, setSearchTerm] = useState<string>(""); 
   useEffect(() =>{
@@ -49,3 +49,5 @@ export const CertificationsContent: React.FC = () => {
     </div>
   )
 }
+
+export default CertificationsContent;

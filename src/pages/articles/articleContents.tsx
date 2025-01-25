@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
-import Image from "next/image"
 import { TagsComponent } from "@/components/tags/tagsComponent";
-import serachIcon from "../../assets/images/search_icon.svg"
 import "../../styles/articleContents.css";
 import { tagArticleSample, contentSample } from "@/mocks/articleContents";
 import { CardArticleComponent } from "@/components/cardArticles/cardArticleComponent";
 import { PaginationComponent } from "@/components/pagination/paginationComponent";
 import { SearchComponent } from "@/components/search/searchComponent";
 
-export const ArticleContents: React.FC = () => {
+const CertificationsContent: React.FC = () => {
   const [isVisible, setVisible] = useState(false);
   const [activeFilter, setAcveFilter] = useState<string>("ALL");
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -62,3 +60,4 @@ export const ArticleContents: React.FC = () => {
   )
     
 }
+export default CertificationsContent;

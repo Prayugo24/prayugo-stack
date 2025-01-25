@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import serachIcon from "../../assets/images/search_icon.svg"
 import Image from "next/image"
 

@@ -1,6 +1,6 @@
 
 import { usePagination } from "@/hooks/pagination/usePagination";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { ButtonNumberPaginationComponent } from "./buttonNumberPaginationComponent";
 import { ButtonNextOrPrevComponent } from "./buttonNextOrPrevComponent";
 
@@ -12,16 +12,14 @@ interface IPagination {
     setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
 }
 
-interface IContentProject {
-    id: number;
-    tag: string;
-    src: string;
-}[]
+// interface IContentProject {
+//     id: number;
+//     tag: string;
+//     src: string;
+// }[]
 
 
 export const PaginationComponent = ({
-    contentProject,
-    itemsPerpage,
     currentPage,
     totalPages,
     setCurrentPage
@@ -45,7 +43,7 @@ export const PaginationComponent = ({
                 
 
                 {/* Numbered Buttons */}
-                {renderPageNumbers.map((page, index) => (
+                {renderPageNumbers.map((page) => (
                  <ButtonNumberPaginationComponent
                     key={page}
                     page={page}
