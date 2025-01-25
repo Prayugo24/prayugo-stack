@@ -1,0 +1,28 @@
+public
+src--
+    |
+    |--app
+        |--fonts
+        |--favicons.ico
+        |--layout.tsx
+        |--page.tsx
+    |--assest
+        |--images
+    |--components
+        |--sidebars
+            |--sidebarComponents.ts
+        |--header
+            |--headerComponents.ts
+    |--hooks
+        |--pagination
+        |--projectsContent
+    |--interfaces
+        |--hooks
+    |--pages
+            |--certificates
+                |--certificatesContent.tsx
+            |--projects
+                |--projectsContent.tsx
+    |--styles
+        |--global.css
+    |--utils
