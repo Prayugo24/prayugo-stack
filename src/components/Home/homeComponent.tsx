@@ -8,6 +8,7 @@ import { HeaderComponent } from "@/components/headers/headerComponent";
 import { SidebarComponent } from "@/components/sidebars/sideBarComponent";
 import ArticleContents from "@/pages/articles/articleContents";
 import { useRouter, useSearchParams } from "next/navigation";
+import myCv from "../../assets/cv/CV_Prayugo_Dwi_Setiyoko.pdf";
 
 export interface IHomeContent {
   activeMenu: string;
@@ -54,25 +55,30 @@ export default function HomeComponent() {
   const handleMenuChange = (menu: string) => {
     setActiveMenu(menu);
     router.push(`/?activeMenu=${menu}`);
-    setIsSidebarOpen(false); // Tutup sidebar setelah memilih menu (untuk mobile)
+    setIsSidebarOpen(false); 
 
   };
+  const handleDownloadCV = async () => {
+    window.open('/api/download', '_blank');
+};
 
   return (
+    
     <div className="h-screen w-full flex flex-col">
-      {/* Header dan Sidebar tetap bisa berada di server-side */}
-      <HeaderComponent isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
+      
+      <HeaderComponent 
+        isSidebarOpen={isSidebarOpen} 
+        setIsSidebarOpen={setIsSidebarOpen} 
+        downloadMyCv={handleDownloadCV}/>
       <div className="flex flex-1 flex-col md:flex-row">
       <SidebarComponent 
         setActiveMenu={handleMenuChange} 
         activeMenu={activeMenu as string} 
         isSidebarOpen={isSidebarOpen}
+        downloadMyCv={handleDownloadCV}
         />
-      {/* <main className="flex-1 bg-slate-900 p-6 overflow-y-auto">{renderContent()}
 
-      </main> */}
       <main className="flex-1 bg-slate-900 p-6 overflow-y-auto">
-          {/* Bungkus HomeContent dengan Suspense */}
           <Suspense fallback={<div className="text-white">Loading...</div>}>
             <HomeContent 
             activeMenu={activeMenu}

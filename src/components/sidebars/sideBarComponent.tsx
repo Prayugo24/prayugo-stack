@@ -1,16 +1,18 @@
 
 import { MenuItems } from "@/mocks/sidebarData";
 import Image from "next/image"
+
 type SidebarProps = {
     setActiveMenu: (menu: string) => void;
     activeMenu: string;
     isSidebarOpen: boolean;
-
+    downloadMyCv: () => void
 };
 
-export const SidebarComponent: React.FC<SidebarProps> = ({  activeMenu, setActiveMenu, isSidebarOpen }) => {
+export const SidebarComponent: React.FC<SidebarProps> = ({  activeMenu, setActiveMenu, isSidebarOpen, downloadMyCv }) => {
     
     const menuItems = MenuItems
+    
     return (
         <nav
             className={`bg-slate-900 text-white w-60 h-full border-r border-gray-500 fixed 
@@ -49,6 +51,7 @@ export const SidebarComponent: React.FC<SidebarProps> = ({  activeMenu, setActiv
                         className="bg-gradient-animated bg-[length:500%_500%] 
                         animate-gradient text-white text-[10px] px-3 py-2 
                         rounded-full transition-all hover:scale-105"
+                        onClick={downloadMyCv}
                     >
                         DOWNLOAD MY CV RESUME
                     </button>

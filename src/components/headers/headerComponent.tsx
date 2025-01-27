@@ -4,10 +4,11 @@ import logoProjects from "../../assets/images/logo.png"
 type HeaderProps = {
     isSidebarOpen: boolean;
     setIsSidebarOpen: (isOpen : boolean) => void;
+    downloadMyCv: () => void
 };
 
 export const HeaderComponent = (
-    {isSidebarOpen, setIsSidebarOpen} : HeaderProps
+    {isSidebarOpen, setIsSidebarOpen, downloadMyCv} : HeaderProps
 ) => {
     return (
         <header
@@ -27,7 +28,7 @@ export const HeaderComponent = (
             <a
                 target="_blank"
                 className="max-md:hidden flex gap-3 text-sm items-center mr-14 group"
-                href="https://greatstack.dev/go/javascript-course">
+                href="#">
                 <Image
                     alt=""
                     loading="lazy"
@@ -39,6 +40,7 @@ export const HeaderComponent = (
                     src={logoFlame}/>
                 <p className="animate-pulse text-base">Let's Start To Develop Something Exciting</p>
                 <button
+                    onClick={downloadMyCv}
                     className="bg-gradient-animated bg-[length:500%_500%] animate-gradient text-white text-[15px] px-7 py-2 rounded-full transition-all group-hover:scale-105">
                     DOWNLOAD MY CV RESUME
                 </button>
