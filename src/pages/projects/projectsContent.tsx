@@ -22,7 +22,7 @@ const ProjectsContent: React.FC = () => {
 
     const filterProject = projects.filter((project) => {
         if(activeFilter !="ALL") {
-            return project.tag == activeFilter
+            return project.tag.find((item) => activeFilter == item)
         } else {
             return project
         }

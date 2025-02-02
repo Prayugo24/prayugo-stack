@@ -1,5 +1,6 @@
 import spaceTourism from "../../src/assets/projects/Responsive-Space-Tourism.png"
 import newsHomePage from "../../src/assets/projects/Responsive-news.png"
+import chatAi from "../../src/assets/projects/aiChat.png"
 
 export const sourceCoudeContent = [
     {
@@ -13,6 +14,12 @@ export const sourceCoudeContent = [
         src: newsHomePage,
         title:"Frontend Mentor - News homepage",
         github:"https://github.com/FrontEndMentor-Challenge/news-homepage-main"
+    },
+    {
+        id: 3,
+        src: chatAi,
+        title:"Aurachat - Your personal ai",
+        github:"https://github.com/Prayugo24/chat-ai-nextjs"
     }
 
 ]

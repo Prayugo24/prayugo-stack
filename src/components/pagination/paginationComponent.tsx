@@ -5,19 +5,12 @@ import { ButtonNumberPaginationComponent } from "./buttonNumberPaginationCompone
 import { ButtonNextOrPrevComponent } from "./buttonNextOrPrevComponent";
 
 interface IPagination {
-    contentProject: { id: number; tag?: string; src: string | any, desc?:string , title?:string }[];
+    contentProject: { id: number; tag?: string | string[]; src: string | any, desc?:string , title?:string }[];
     itemsPerpage: number
     currentPage:number
     totalPages:number
     setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
 }
-
-// interface IContentProject {
-//     id: number;
-//     tag: string;
-//     src: string;
-// }[]
-
 
 export const PaginationComponent = ({
     currentPage,
