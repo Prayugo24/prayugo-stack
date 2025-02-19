@@ -1,7 +1,7 @@
 import Image from "next/image"
 
 interface ICardComponent {
-    contentProject: { id: number; tag: string[]; src: string | any, url:string }[];
+    contentProject: { id: number; tag: string[] | string ; src: string | any, url:string }[];
 }
 
 export const CardComponent= ({contentProject}:ICardComponent) => {
