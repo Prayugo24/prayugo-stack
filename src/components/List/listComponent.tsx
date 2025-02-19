@@ -11,11 +11,11 @@ export const ListComponent = ({content}:IListComponent) =>{
                 <div key={value.id} className="animate-fadefast mx-4 sm:mx-auto flex items-center gap-2 
                     py-4 border-b border-b-[#373F62] hover:bg-[#ffffff05] ">
                     <div className="flex-1 flex items-center gap-3">
-                        <a target="_blank" href="https://youtu.be/VIIaMCBeQF0?si=pfItE-3Zxqah1ktI">
+                        <a target="_blank" href={value.github}>
                             <Image alt="" loading="lazy" width="480" height="360"
                             data-nimg="1" className="w-24" src={value?.src}/>
                         </a>
-                        <a target="_blank" href="https://youtu.be/VIIaMCBeQF0?si=pfItE-3Zxqah1ktI">
+                        <a target="_blank" href={value.github}>
                             <p className="text-white text-sm sm:text-base">{value?.title}</p>
                         </a>
                     </div>
