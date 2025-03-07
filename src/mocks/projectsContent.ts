@@ -1,6 +1,7 @@
 import spaceTourism from "../../src/assets/projects/Responsive-Space-Tourism.png"
 import newsHomePage from "../../src/assets/projects/Responsive-news.png"
 import chatAi from "../../src/assets/projects/aiChat.png"
+import ylcHoroscop from "../../src/assets/projects/ylc-horoscop.png"
 export const projectsSample = [
     {
         id: 1,
@@ -19,6 +20,13 @@ export const projectsSample = [
         tag:["NEXT.JS","React.js","Tailwind"],
         src:chatAi,
         url:"https://chat-ai-nextjs-9icqyqa82-prays-projects-e48c2c66.vercel.app/"
+
+    },
+    {
+        id:4,
+        tag:["HTML","CSS","Bootstrap"],
+        src:ylcHoroscop,
+        url:"https://your-life-choice.netlify.app/"
 
     }
 
@@ -48,5 +56,9 @@ export const tagProjectsSample = [
     {
         id:6,
         tag:"CSS"
+    },
+    {
+        id:7,
+        tag:"Bootstrap"
     }
 ]

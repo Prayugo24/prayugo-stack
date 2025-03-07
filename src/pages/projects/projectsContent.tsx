@@ -9,7 +9,7 @@ const ProjectsContent: React.FC = () => {
     const [isVisible, setVisible] = useState(false);
     const [activeFilter, setAcveFilter] = useState<string>("ALL");
     const [currentPage, setCurrentPage] = useState<number>(1);
-    const itemsPerPage = 3;
+    const itemsPerPage = 9;
     useEffect(() =>{
         setTimeout(() => {
             setVisible(true)
