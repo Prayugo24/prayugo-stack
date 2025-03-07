@@ -1,7 +1,7 @@
 import spaceTourism from "../../src/assets/projects/Responsive-Space-Tourism.png"
 import newsHomePage from "../../src/assets/projects/Responsive-news.png"
 import chatAi from "../../src/assets/projects/aiChat.png"
-import ylcHoroscop from "../../src/assets/projects/ylc-horoscop.png"
+import ylcHoroscop from "../../src/assets/projects/Ylchoroscop.png"
 export const sourceCoudeContent = [
     {
         id: 1,
