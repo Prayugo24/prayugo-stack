@@ -16,7 +16,7 @@ const CertificationsContent: React.FC = () => {
           setVisible(true)
       },250)
   },[] )
-  const itemsPerPage = 3;
+  const itemsPerPage = 5;
   const tagArticleSamples = tagArticleSample
   const article = contentSample
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {

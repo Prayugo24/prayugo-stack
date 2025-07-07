@@ -2,10 +2,20 @@ import ollama from "../../src/assets/article/ollama.webp"
 import medium from "../../src/assets/article/medium.png"
 import nodejsImage from "../../src/assets/article/nodejs.webp"
 import pyhtonImage from "../../src/assets/article/python.webp"
+import nextJsPerformance from "../../src/assets/article/nextjs-performance.png"
 
 export const contentSample = [
     {
         id: 1,
+        tag: "Next.js",
+        src: nextJsPerformance,
+        title:"Boosting Your Next.js Application’s Performance: A Developer’s Handbook",
+        desc: "Next.js is a powerful framework for building web applications. However, as your application grows, you may encounter performance issues. In this article, we’ll explore strategies to boost your Next.js application’s performance, including code optimization, caching, and server-side rendering.",
+        icon:medium,
+        linkUrl:"https://medium.com/@pray.arsian24/boosting-your-next-js-applications-performance-a-developer-s-handbook-b3b873c41ff3"
+    },
+    {
+        id: 2,
         tag: "AI",
         src: ollama,
         title:"Creating Your Own Custom AI on Your Laptop, and It’s Open Source",
@@ -14,7 +24,7 @@ export const contentSample = [
         linkUrl:"https://medium.com/@pray.arsian24/ollama-the-best-solution-for-creating-your-own-custom-ai-on-your-laptop-and-its-open-source-be5d10a28fa5"
     },
     {
-        id: 2,
+        id: 3,
         tag: "Node.js",
         src: nodejsImage,
         title:"Understanding What Node.js and NPM Are? ",
@@ -23,7 +33,7 @@ export const contentSample = [
         linkUrl:"https://medium.com/@pray.arsian24/mengenal-apa-itu-node-js-dan-npm-8b42a939caf8"
     },
     {
-        id: 3,
+        id: 4,
         tag: "Python",
         src: pyhtonImage,
         title:"Getting to Know the Python Language",
